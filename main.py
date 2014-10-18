@@ -21,11 +21,6 @@ def main():
             query_parsed_html = BeautifulSoup(query_content)
             title_div =  query_parsed_html.body.findAll('div',attrs={'class':'title'})
             print title_div
-        #sub_url = "http://subscene.com" + title_div[0].a['href']
-        #print "Subtitle URL: ",sub_url
-        #sub_content = urllib2.urlopen(sub_url).read()
-        #sub_parsed_html = BeautifulSoup(sub_content)
-        #print sub_parsed_html
             title_div = query_parsed_html.body.findAll('td',attrs={'class':'a1'})
             print title_div
         
